@@ -1,4 +1,4 @@
-const BASE = process.env.REACT_APP_API_URL || '/api';
+const BASE = "https://arvyax-journal-production.up.railway.app/api";
 
 async function apiFetch(path, options = {}) {
   const res = await fetch(`${BASE}${path}`, {
