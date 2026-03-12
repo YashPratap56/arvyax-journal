@@ -9,8 +9,11 @@ const PORT = process.env.PORT || 3001;
 
 // ─── Middleware ───────────────────────────────────────────────────────────────
 app.use(cors({
-  origin: process.env.CORS_ORIGIN || 'http://localhost:3000',
-  methods: ['GET', 'POST', 'PUT', 'DELETE'],
+  origin: [
+    "http://localhost:3000",
+    "https://arvyax-journal.vercel.app"
+  ],
+  methods: ["GET", "POST", "PUT", "DELETE"],
 }));
 app.use(express.json({ limit: '50kb' })); // guard against huge payloads
 
